@@ -3,9 +3,15 @@ var app = express();
 
 var PORT = process.env.PORT || 3000;
 
-app.get("/", (req,res) => {
-  res.send("worse name ever but i love you 3000 and one");
-})
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
+
+require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
+
 
 app.listen(PORT, function(){
   console.log("listening on " + PORT);

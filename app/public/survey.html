@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Survey</h1>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+
+  $("#submitBtn").on("click", event => {
+    event.preventDefault();
+
+    if(formValid){
+
+      var newFriend = {
+        Name: $("#name").val().trim(),
+        Photo: $("#photo").val().trim(),
+        Score: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()       
+        ]
+      }
+
+      var url = Location;
+
+      $.post(url + "api/friends", newFriend, data => {
+        $("#bestie").text(data.Name);
+        $("#bestiePhoto").attr("src", data.Photo);
+        $("#bestieModal").modal("toggle");
+      })
+
+    } else {
+      alert("Please make sure all input fields are filled out.");
+    }
+
+  })
+
+  function formValid(){
+
+    if($("#name").val() === "" || $("#email").val() === "" || $("#q1").val() === "empty" || $("#q2").val() === "empty" || $("#q3").val() === "empty" || $("#q4").val() === "empty" || $("#q5").val() === "empty" || $("#q6").val() === "empty" || $("#q7").val() === "empty" || $("#q8").val() === "empty" || $("#q9").val() === "empty" || $("#q10").val() === "empty") {
+      return false;
+    } else {
+      return true;
+    }
+
+  }
+
+
+</script>
