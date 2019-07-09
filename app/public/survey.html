@@ -4,13 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Document</title>
 </head>
 <body>
-  <h1>Survey</h1>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+  <div class="container content">
+    <h1>Survey Questions</h1>
+    <form>
+    <h3>About You</h3>
+      <div class="form-group">
+        <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+      </div>
+      <div class="form-group">
+        <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+      </div>
+      <div class="form-group">
+        <h3>Question 1</h3>
+        <label for="q1">I make friends easily.</label>
+        <select class="form-control" id="q1">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 2</h3>
+        <label for="q2">I have a vivid imagination.</label>
+        <select class="form-control" id="q2">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 3</h3>
+        <label for="q3">I worry about things.</label>
+        <select class="form-control" id="q3">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 4</h3>
+        <label for="q4">I love large parties.</label>
+        <select class="form-control" id="q4">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 5</h3>
+        <label for="q5">I get angry easily.</label>
+        <select class="form-control" id="q5">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 6</h3>
+        <label for="q6">I take charge.</label>
+        <select class="form-control" id="q6">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 7</h3>
+        <label for="q7">I experience my emotions intensely.</label>
+        <select class="form-control" id="q7">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 8</h3>
+        <label for="q8">I love excitement.</label>
+        <select class="form-control" id="q8">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 9</h3>
+        <label for="q9">I like to solve complex problems.</label>
+        <select class="form-control" id="q9">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Question 10</h3>
+        <label for="q10">I often eat too much.</label>
+        <select class="form-control" id="q10">
+          <option value="empty">Please Select One</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </form>
+    <div class="text-center">
+      <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+    </div>
+  
+    <!-- Modal after survey completion -->
+    <div id="bestieModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Bestie For Life!</h1>
+          </div>
+          <div class="modal-body">
+            <h2 id="bestie"></h2>
+            <img id="bestiePhoto" src="#">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <a href="/api/friends">Friends Library</a>
+      <span>|</span>
+      <a href="https://github.com/viaduct12/friendfinder">GitHub Repo</a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 </body>
 </html>
 
@@ -19,7 +181,7 @@
   $("#submitBtn").on("click", event => {
     event.preventDefault();
 
-    if(formValid){
+    if(formValid()){
 
       var newFriend = {
         Name: $("#name").val().trim(),
@@ -38,9 +200,9 @@
         ]
       }
 
-      var url = Location;
+      var url = window.location.origin;
 
-      $.post(url + "api/friends", newFriend, data => {
+      $.post(url + "/api/friends", newFriend, data => {
         $("#bestie").text(data.Name);
         $("#bestiePhoto").attr("src", data.Photo);
         $("#bestieModal").modal("toggle");
@@ -53,7 +215,6 @@
   })
 
   function formValid(){
-
     if($("#name").val() === "" || $("#email").val() === "" || $("#q1").val() === "empty" || $("#q2").val() === "empty" || $("#q3").val() === "empty" || $("#q4").val() === "empty" || $("#q5").val() === "empty" || $("#q6").val() === "empty" || $("#q7").val() === "empty" || $("#q8").val() === "empty" || $("#q9").val() === "empty" || $("#q10").val() === "empty") {
       return false;
     } else {

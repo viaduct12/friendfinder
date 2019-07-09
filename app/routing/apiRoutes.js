@@ -2,25 +2,22 @@ var friends = require("../data/friends");
 
 module.exports = function(app){
 
-  app.get("/friends", (req, res) => {
-    // res.send("worse name ever but i love you 3000 and one");
-    res.json(friends)
+  app.get("/api/friends", (req, res) => {
+    res.json(friends);
 
   })
 
-  app.post("/friends", (req, res) => {
-
-    var index;
-
+  app.post("/api/friends", (req, res) => {
+    var index = 0;
+    var temp = 100;
     for(var i = 0; i < friends.length; i++){
       var totalDiff = 0;
-      var temp = 0;
 
       for(var j = 0; j< friends[i].Score.length; j++){
-        totalDiff += Math.abs(parseInt(friends[i].Score[j] - parseInt(req.body.Score[j])));
+        totalDiff += Math.abs(parseInt(friends[i].Score[j]) - parseInt(req.body.Score[j]));
       }
-      
-      if(totalDiff > temp){
+
+      if(totalDiff < temp){
         index = i;
         temp = totalDiff;
       }
