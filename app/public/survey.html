@@ -143,7 +143,7 @@
       <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
     </div>
   
-    <!-- Modal after survey completion -->
+    <!-- Modal that will show your friend after you complete the survey -->
     <div id="bestieModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -179,11 +179,15 @@
 
 <script type="text/javascript">
 
+  //jquery for when you click the submit button
   $("#submitBtn").on("click", event => {
+    //prevents the default of a form which would be a get request
     event.preventDefault();
 
+    //comparator to check if the form has been completed properly
     if(formValid()){
 
+      //object that will store all the data from the form
       var newFriend = {
         Name: $("#name").val().trim(),
         Photo: $("#photo").val().trim(),
@@ -201,8 +205,10 @@
         ]
       }
 
+      //i know i could hard code the url but this would get the url from the windows location object
       var url = window.location.origin;
 
+      //ajax that will make a post request using the newFriend object and will post the friend that will match
       $.post(url + "/api/friends", newFriend, data => {
         $("#bestie").text(data.Name);
         $("#bestiePhoto").attr("src", data.Photo);
@@ -215,6 +221,7 @@
 
   })
 
+  //function to check if the form is valid or not
   function formValid(){
     if($("#name").val() === "" || $("#email").val() === "" || $("#q1").val() === "empty" || $("#q2").val() === "empty" || $("#q3").val() === "empty" || $("#q4").val() === "empty" || $("#q5").val() === "empty" || $("#q6").val() === "empty" || $("#q7").val() === "empty" || $("#q8").val() === "empty" || $("#q9").val() === "empty" || $("#q10").val() === "empty") {
       return false;
@@ -223,6 +230,4 @@
     }
 
   }
-
-
 </script>

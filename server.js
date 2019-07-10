@@ -1,3 +1,5 @@
+//basically the main or driver that will handle all the routes; 
+
 var express = require("express");
 var app = express();
 
