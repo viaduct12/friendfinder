@@ -26,5 +26,8 @@ The Friend Finder app will match you with a friend that would have the closest m
 ## Demo
 [Friend Finder](https://vimeo.com/347235151)
 
+## Deployed Link on Heroku
+[Deployed Link](https://gentle-atoll-42740.herokuapp.com/)
+
 ## Author
 Lawrence Fiesta
